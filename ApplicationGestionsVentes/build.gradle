@@ -1,0 +1,76 @@
+/*
+ * La configuration de Gradle pour compiler et exécuter le projet.
+ */
+
+// Les plugins permettant à Gradle de gérer le projet en tant qu'application JavaFX.
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.11'
+}
+
+// Les dépôts d'où les dépendances doivent être téléchargées.
+repositories {
+    mavenCentral()
+}
+
+// La version du langage Java utilisée dans le projet.
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+// Le nom de la classe contenant la méthode "main".
+// Notez que le paquetage complet doit être spécifié.
+application {
+    mainClass = 'fr.univartois.butinfo.ihm.GestionVentesApplication'
+}
+
+// La version de JavaFX utilisée dans le projet, et les composants requis.
+javafx {
+    version = '17.0.2'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.swing']
+}
+
+dependencies{
+	// https://mvnrepository.com/artifact/org.jgrapht/jgrapht-core
+	implementation 'org.jgrapht:jgrapht-core:1.5.1'
+	// https://mvnrepository.com/artifact/org.assertj/assertj-core
+	testImplementation 'org.assertj:assertj-core:3.23.1'
+	// https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy
+	implementation 'net.bytebuddy:byte-buddy:1.12.10'
+	// https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy-agent
+	testImplementation 'net.bytebuddy:byte-buddy-agent:1.12.10'
+	// https://mvnrepository.com/artifact/junit/junit
+	testImplementation 'junit:junit:4.13.2'
+	// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+	implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+	// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+	implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
+	// https://mvnrepository.com/artifact/org.mockito/mockito-core
+	testImplementation 'org.mockito:mockito-core:4.6.1'
+	// https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+	testImplementation 'org.mockito:mockito-junit-jupiter:4.6.1'
+	// https://mvnrepository.com/artifact/org.objenesis/objenesis
+	testImplementation 'org.objenesis:objenesis:3.2'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/org.jgrapht/jgrapht-core
+    implementation 'org.jgrapht:jgrapht-core:1.5.1'
+	// https://mvnrepository.com/artifact/org.jgrapht/jgrapht-io
+    implementation 'org.jgrapht:jgrapht-io:1.5.1'
+	// https://mvnrepository.com/artifact/org.jgrapht/jgrapht-ext
+    implementation 'org.jgrapht:jgrapht-ext:1.5.1'
+	// https://mvnrepository.com/artifact/com.github.vlsi.mxgraph/jgraphx
+    implementation 'com.github.vlsi.mxgraph:jgraphx:4.2.2'
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-swing
+	implementation 'org.openjfx:javafx-swing:17.0.2'
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+}
